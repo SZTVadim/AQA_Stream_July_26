@@ -13,6 +13,7 @@
 # Задача 6:
 # Получите список имен пользователей старше 18.
 # users = [{"name": "Ann", "age": 20}, {"name": "Bob", "age": 17}, {"name": "Kate", "age": 25}]
+# подменим возраст Боба на 19
 
 response_time = 0.357
 response_time_ms = response_time * 1000
@@ -26,3 +27,5 @@ users = [
     {"name": "Kate", "age": 25}]
 names = [user["name"] for user in users if user["age"] > 18]
 print(names)
+users[1]["age"] = 19
+print(users)

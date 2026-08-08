@@ -19,3 +19,13 @@ emails[-1] = emails[-1].replace(",",".")
 new_email = [email for email in emails if "@" in email and "." in email]
 
 print(new_email)
+
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)

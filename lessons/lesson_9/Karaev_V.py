@@ -14,24 +14,4 @@ text = "  Status: OK  "
 user = {"id": 101, "name": "Ivan", "role": "admin", "active": True}
 # Извлеките name и role
 
-# ========== Часть 3 (дополнительное задание) ==========
-# Нужно подключить 10 человек к сессии/шерингу
-participants = [
-    "Аня",
-    "Борис",
-    "Вера",
-    "Глеб",
-    "Даша",
-    "Егор",
-    "Женя",
-    "Зина",
-    "Илья",
-    "Кирилл",
-]
-
-max_participants = 10
-print(f"Подключено участников: {len(participants)}")
-print(f"Лимит сессии: {max_participants}")
-print("Список участников:", participants)
-
 

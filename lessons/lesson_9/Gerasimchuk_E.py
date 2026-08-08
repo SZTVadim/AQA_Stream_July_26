@@ -25,7 +25,5 @@ url = "https://site.com/api/v1/users?id=15"
 flag_api = "/api/" in url
 url_dict = url.split("?")
 key, value = url_dict[-1].split('=')
-# key = key_value_dict[0]
-# value = key_value_dict[1]
 print(key)
 print(value)
