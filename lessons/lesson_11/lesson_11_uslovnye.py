@@ -1,10 +1,9 @@
-
-
 def validate_age(age):
     if age >= 18:
         print("Доступ разрешен")
     else:
         print("Доступ запрещен")
+
 
 # validate_age(17)
 # validate_age(19)
@@ -26,6 +25,8 @@ elif score >= 60:
     grade = "C"
 else:
     grade = "D"
+
+
 # print(grade)
 
 # Вложенные условия
@@ -47,8 +48,11 @@ def check_temp(t):
     else:
         return "Жарко"
 
+
 # print(check_temp(18))
 a = 1
+
+
 # match / case
 def engine(comand):
     match comand:
@@ -58,7 +62,6 @@ def engine(comand):
             return "Двигатель заглушен"
         case _:
             return "Неизвестная команда"
-
 
 
 print(engine("start"))
