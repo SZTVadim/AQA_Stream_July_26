@@ -2,6 +2,11 @@ name: Autotests
 
 on:
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Причина запуска"
+        required: false
+        default: "manual"
   pull_request:
     branches: [main, master]
 
