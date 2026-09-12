@@ -35,5 +35,3 @@
 #    (используйте tuple(...))
 # 2. Выведите результат
 
-scores = (10, 7, 0, 9, 8, 5)
-scores_x_10 = tuple(round(element * 1.1, 1) for element in scores)
