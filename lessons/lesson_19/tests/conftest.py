@@ -34,10 +34,10 @@ def product_id(new_product):
     return new_product.json()["data"]["id"]
 
 @pytest.fixture()
-def delete_product(products, products_helper):
+def teardown_product(products, products_helper):
     yield
     products.delete_product(products_helper.product_id)
 
 @pytest.fixture()
-def setup_teardown_product(product_id, delete_product):
+def setup_teardown_product(product_id, teardown_product):
     yield product_id
