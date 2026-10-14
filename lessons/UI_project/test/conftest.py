@@ -2,8 +2,12 @@ import pytest
 from playwright.sync_api import sync_playwright
 
 from lessons.UI_project.config.credentials import PASSWORD, USERNAME
+from lessons.UI_project.pages.add_employee_page import AddEmployeePage
 from lessons.UI_project.pages.auth_page import AuthPage
 from lessons.UI_project.pages.dashboard_page import DashboardPage
+from lessons.UI_project.pages.employee_list import EmployeeListPage
+from lessons.UI_project.pages.personal_details_page import PersonalDetailsPage
+from lessons.UI_project.utils.employee_generator import Employee
 
 
 @pytest.fixture(scope="session")
@@ -47,3 +51,19 @@ def dashboard_page(page):
 def dashboard(auth_page, dashboard_page):
     auth_page.authorize_on_site(USERNAME, PASSWORD)
     return dashboard_page
+
+@pytest.fixture
+def employee_list_page(page):
+    return EmployeeListPage(page)
+
+@pytest.fixture
+def add_employee_page(page):
+    return AddEmployeePage(page)
+
+@pytest.fixture
+def personal_details_page(page):
+    return PersonalDetailsPage(page)
+
+@pytest.fixture
+def employee_data():
+    return Employee.generate_employee()

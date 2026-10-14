@@ -7,6 +7,7 @@ from lessons.UI_project.config.credentials import USERNAME, PASSWORD
 
 
 class TestAuthorize:
+    @pytest.mark.smoke
     def test_visible_elements(self, auth_page):
         expect(auth_page.page).to_have_url(re.compile("auth/login"))
         expect(auth_page.page).to_have_title("OrangeHRM")
@@ -18,6 +19,7 @@ class TestAuthorize:
         expect(auth_page.submit_locator).to_be_visible()
         expect(auth_page.forgot_password_locator).to_be_visible()
 
+    @pytest.mark.regression
     @pytest.mark.parametrize("username,password", [(USERNAME, "invalid_password"), ("invalid_username", PASSWORD)],
                              ids=["invalid_password", "invalid_username"])
     def test_invalid_credentials(self, auth_page, username, password):
